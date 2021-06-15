@@ -1,0 +1,68 @@
+header:
+  version: 1
+
+distro: poky
+target: core-image-sato
+
+repos:
+  poky:
+    url: "https://git.yoctoproject.org/git/poky"
+    refspec: 2e7fa80bf9a555649edf7509b9b626a768761e88
+    layers:
+      meta:
+      meta-poky:
+      meta-yocto-bsp:
+
+  meta-openembedded:
+    		url: "https://git.openembedded.org/meta-openembedded"
+    		refspec: 346681e7bf9c78008a845fc89031be4fd4ceb3a1
+    		layers:
+		  meta-oe:
+                  meta-python:
+                  meta-gnome:
+                  meta-xfce:
+                  meta-multimedia:
+                  meta-networking:
+
+  openembedded-core:
+    		url: "https://git.openembedded.org/openembedded-core"
+    		refspec: ecd636154e7cfc1349a7cfd8026a85eafa219535
+    		layers:
+     		 meta:
+
+  meta-arm:
+	url: "https://git.yoctoproject.org/git/meta-arm"
+	refspec: 2720a1b32b156465066e9195a4e86741ac976a88
+	layers:
+      	  meta-arm:
+          meta-arm-bsp:
+          meta-arm-toolchain:
+
+env:
+  BB_LOGCONFIG: ""
+  PYTHONPATH: ""
+
+local_conf_header:
+  base: |
+    CONF_VERSION = "1"
+    PACKAGE_CLASSES = "package_ipk package_rpm"
+    LICENSE_FLAGS_WHITELIST += "armcompiler"
+    PACKAGECONFIG_remove_pn-qemu-system-native = "gtk+ sdl"
+    INHERIT += "rm_work"
+    ERROR_QA = "${WARN_QA}"
+    EXTRA_IMAGE_FEATURES = "debug-tweaks"
+    DISTRO_FEATURES_append = " systemd"
+    VIRTUAL-RUNTIME_init_manager = " systemd"
+    DISTRO_FEATURES_BACKFILL_CONSIDERED = "sysvinit"
+    IMAGE_FSTYPES = "${INITRAMFS_FSTYPES} wic" 
+    PATCHRESOLVE = "noop"
+
+bblayers_conf_header:
+  base: |
+    POKY_BBLAYERS_CONF_VERSION = "2"
+    BBPATH = "${TOPDIR}"
+    BBFILES ?= ""
+
+target:
+  - core-image-minimal
+

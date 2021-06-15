@@ -1,0 +1,6 @@
+header:
+  version: 1
+  includes:
+    - base.yml
+
+machine: qemux86-64
