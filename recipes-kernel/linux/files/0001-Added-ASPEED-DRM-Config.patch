@@ -1,0 +1,24 @@
+From e83eb29ce0643e41eecddbe36ccc780896f5b9ba Mon Sep 17 00:00:00 2001
+From: Dinesh kumar <dineshkumar.varadarajan@adlinktech.com>
+Date: Tue, 15 Jun 2021 15:12:00 +0530
+Subject: [PATCH] Added ASPEED DRM Config
+
+---
+ arch/arm64/configs/altra_5.10_defconfig | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/arch/arm64/configs/altra_5.10_defconfig b/arch/arm64/configs/altra_5.10_defconfig
+index 1751fe678d2e..4127a60dba2e 100644
+--- a/arch/arm64/configs/altra_5.10_defconfig
++++ b/arch/arm64/configs/altra_5.10_defconfig
+@@ -846,6 +846,7 @@ CONFIG_DRM_BOCHS=m
+ CONFIG_DRM_VIRTIO_GPU=m
+ CONFIG_DRM_HISI_HIBMC=m
+ CONFIG_DRM_CIRRUS_QEMU=m
++CONFIG_DRM_ASPEED_GFX=y
+ CONFIG_FB=y
+ CONFIG_FB_TILEBLITTING=y
+ CONFIG_FB_ARMCLCD=y
+-- 
+2.17.1
+
