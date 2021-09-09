@@ -29,6 +29,7 @@ The repository contains Yocto layers that require dependencies as follows.
 ### How to flash WIC image 
 
 - Boot from USB drive
+- Boot from SSD 
 
 ## Repository License
 
