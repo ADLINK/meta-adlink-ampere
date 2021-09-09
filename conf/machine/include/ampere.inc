@@ -14,7 +14,7 @@ EFI_PROVIDER ?= "grub-efi"
 
 IMAGE_FSTYPES += "tar.bz2 ext4 wic wic.gz cpio.gz"
 WKS_FILE ?= "ampere-efidisk.wks"
-
+WIC_CREATE_EXTRA_ARGS_append = " --no-fstab-update"
 
 DISTRO_FEATURES_append = " systemd"
 DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
