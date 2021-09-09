@@ -8,7 +8,7 @@ The high-level structure of the `meta-adlink-ampere repository is as follows:
 
 **recipes-core**: Provide Image generating bb files.
 
-**ComHpc.yml**: Kas file to build Image .
+**wic**: wks file to build Image .
 
 ## Layers Dependencies
 
