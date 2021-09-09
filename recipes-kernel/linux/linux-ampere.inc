@@ -1,3 +1,9 @@
+# Copyright (c) 2021, ADLINK Technology Inc
+#
+# SPDX-License-Identifier: MIT
+
+
+
 # Recipe for building ampere kernel
 
 SUMMARY = "Linux Kernel Upstream, supported by ampere"

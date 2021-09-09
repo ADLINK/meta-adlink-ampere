@@ -1,3 +1,7 @@
+# Copyright (c) 2021, ADLINK Technology Inc
+#
+# SPDX-License-Identifier: MIT
+
 require conf/machine/include/arm/arch-armv8a.inc
 
 

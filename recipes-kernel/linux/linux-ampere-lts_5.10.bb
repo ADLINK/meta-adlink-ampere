@@ -1,3 +1,7 @@
+# Copyright (c) 2021, ADLINK Technology Inc
+#
+# SPDX-License-Identifier: MIT
+
 SRCREV ?= "70bff72b430348aa7f807d7200f9936c533f3389"
 SRCREV_meta ?= "8f16b5cfe0600f2a7ed1ce68633a88a1196b9776"
 

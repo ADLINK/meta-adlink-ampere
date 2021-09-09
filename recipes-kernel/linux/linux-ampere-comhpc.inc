@@ -1,3 +1,7 @@
+# Copyright (c) 2021, ADLINK Technology Inc
+#
+# SPDX-License-Identifier: MIT
+
 FILESEXTRAPATHS_prepend := "${THISDIR}/linux-ampere-comhpc:"
 
 SRC_URI_append = " \
