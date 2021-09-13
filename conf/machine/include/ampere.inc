@@ -12,7 +12,7 @@ PREFERRED_VERSION_linux-ampere-lts ?= "5.10%"
 EFI_PROVIDER ?= "grub-efi"
 
 
-IMAGE_FSTYPES += "tar.bz2 ext4 wic wic.gz cpio.gz"
+IMAGE_FSTYPES += "tar.bz2 ext4 wic wic.bz2 wic.bmap"
 WKS_FILE ?= "ampere-efidisk.wks"
 WIC_CREATE_EXTRA_ARGS_append = " --no-fstab-update"
 
@@ -25,3 +25,5 @@ VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
 IMAGE_INSTALL_append = " kernel-modules"
 
 KERNEL_IMAGETYPE = "Image"
+
+
