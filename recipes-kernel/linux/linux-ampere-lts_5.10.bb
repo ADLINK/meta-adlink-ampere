@@ -12,13 +12,10 @@ KBRANCH ?= "linux-5.10.y"
 KMETA_BRANCH ?= "yocto-5.10"
 
 # Apply following patches
-SRC_URI_append = " file://defconfig "
+SRC_URI_append_comhpc = " file://comhpc.scc "
 
 KERNEL_VERSION_SANITY_SKIP="1"
 
 COMPATIBLE_MACHINE = "comhpc"
-
-# Use intree defconfig
-#KBUILD_DEFCONFIG = "altra_5.10_defconfig"
 
 require linux-ampere.inc
