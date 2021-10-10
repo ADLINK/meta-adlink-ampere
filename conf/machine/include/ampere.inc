@@ -16,14 +16,6 @@ IMAGE_FSTYPES += "tar.bz2 ext4 wic wic.bz2 wic.bmap"
 WKS_FILE ?= "ampere-efidisk.wks"
 WIC_CREATE_EXTRA_ARGS_append = " --no-fstab-update"
 
-DISTRO_FEATURES_append = " systemd"
-DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
-VIRTUAL-RUNTIME_init_manager = "systemd"
-VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
-
-
-IMAGE_INSTALL_append = " kernel-modules"
-
 KERNEL_IMAGETYPE = "Image"
 
 
