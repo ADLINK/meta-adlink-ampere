@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-do_install_append () {
+do_install:append () {
     cat >> ${D}${sysconfdir}/fstab <<EOF
 # Support sda and NVMe M.2 SSD mounting
 /dev/nvme0n1p2	/	auto	defaults,sync	0	0

@@ -12,7 +12,7 @@ KBRANCH ?= "linux-5.10.y"
 KMETA_BRANCH ?= "yocto-5.10"
 
 # Apply linux Configuration/patches
-SRC_URI_append_comhpc = " file://comhpc-standard.scc "
+SRC_URI:append:comhpc = " file://comhpc-standard.scc "
 
 KERNEL_VERSION_SANITY_SKIP="1"
 

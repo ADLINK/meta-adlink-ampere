@@ -14,7 +14,7 @@ EFI_PROVIDER ?= "grub-efi"
 
 IMAGE_FSTYPES += "tar.bz2 ext4 wic wic.bz2 wic.bmap"
 WKS_FILE ?= "ampere-efidisk.wks"
-WIC_CREATE_EXTRA_ARGS_append = " --no-fstab-update"
+WIC_CREATE_EXTRA_ARGS:append = " --no-fstab-update"
 
 KERNEL_IMAGETYPE = "Image"
 
