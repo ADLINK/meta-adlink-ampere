@@ -1,0 +1,8 @@
+define KMACHINE comhpc-ap1
+define KTYPE standard
+define KARCH arm64
+
+include comhpc.scc
+kconf feature ax99xx.cfg
+
+

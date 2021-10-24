@@ -1,0 +1,7 @@
+define KMACHINE comhpc-ava
+define KTYPE standard
+define KARCH arm64
+
+include comhpc.scc
+
+
