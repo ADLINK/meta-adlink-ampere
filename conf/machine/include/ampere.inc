@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-require conf/machine/include/arm/arch-armv8a.inc
+require conf/machine/include/arm/armv8-2a/tune-neoversen1.inc
 
 
 # Use kernel provided by ampere
