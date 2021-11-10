@@ -1,7 +1,5 @@
-kconf hardware bsp/base.cfg
-kconf hardware bsp/networking.cfg
+kconf hardware bsp/comhpcbase.cfg
 kconf hardware bsp/ethernet.cfg
 kconf hardware bsp/misc.cfg
-kconf hardware bsp/usb.cfg
 
 
