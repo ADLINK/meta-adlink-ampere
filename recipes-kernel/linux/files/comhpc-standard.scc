@@ -2,6 +2,25 @@ define KMACHINE comhpc
 define KTYPE standard
 define KARCH arm64
 
+
+#standard/Base configurations
+include ktypes/base/base.scc
+kconf non-hardware ktypes/standard/standard.cfg
+
+#Kernel Features
+include features/docker/docker.scc
+include features/cgroups/cgroups.scc
+include features/netfilter/netfilter.scc
+include features/usb/ehci-hcd.scc
+include features/usb/xhci-hcd.scc
+include features/power/arm.scc
+
+
+#FS Configuration
+include cfg/fs/devtmpfs.scc 
+include cfg/fs/ext2.scc
+include cfg/fs/ext4.scc
+include cfg/fs/vfat.scc
+
+#Board specific configuration
 include comhpc.scc
-
-
