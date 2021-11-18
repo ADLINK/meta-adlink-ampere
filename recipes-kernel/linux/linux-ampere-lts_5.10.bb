@@ -10,7 +10,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"
 # KBRANCH is set to 5.10 branch on the repository
 KBRANCH ?= "linux-5.10.y"
 KMETA_BRANCH ?= "yocto-5.10"
-
+LINUX_VERSION_comhpc = "5.10"
 # Apply linux Configuration/patches
 SRC_URI_append_comhpc = " file://comhpc-standard.scc "
 

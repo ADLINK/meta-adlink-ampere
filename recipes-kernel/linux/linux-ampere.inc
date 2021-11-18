@@ -26,11 +26,11 @@ SRC_URI = "git://github.com/AmpereComputing/ampere-lts-kernel.git;branch=${KBRAN
 DEPENDS += "${@bb.utils.contains('ARCH', 'x86', 'elfutils-native', '', d)}"
 DEPENDS += "openssl-native util-linux-native"
 
-LINUX_VERSION ?= "${PV}.27"
 S = "${WORKDIR}/git"
 
 KCONFIG_MODE = "--alldefconfig"
 
 # Add machine-specific settings
 MACHINE_KERNEL_REQUIRE ?= ""
+
 
