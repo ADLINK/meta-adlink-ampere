@@ -11,6 +11,8 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"
 KBRANCH ?= "linux-5.10.y"
 KMETA_BRANCH ?= "yocto-5.10"
 
+LINUX_VERSION_comhpc = "5.10"
+
 # Apply linux Configuration/patches
 SRC_URI:append:comhpc = " file://comhpc-standard.scc "
 
