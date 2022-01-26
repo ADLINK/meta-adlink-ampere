@@ -2,10 +2,10 @@
 #
 # SPDX-License-Identifier: MIT
 
-FILESEXTRAPATHS_prepend_comhpc := "${THISDIR}/files:"
+FILESEXTRAPATH:prepend:comhpc := "${THISDIR}/files:"
 
 # Apply linux Configuration/patches
-SRC_URI_append_comhpc = " file://comhpc-standard.scc "
+SRC_URI:append:comhpc = " file://comhpc-standard.scc "
 
 KERNEL_VERSION_SANITY_SKIP="1"
 
