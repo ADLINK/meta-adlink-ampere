@@ -13,5 +13,6 @@ IMAGE_FSTYPES += "tar.bz2 wic.gz wic.bmap"
 
 EFI_PROVIDER ?= "grub-efi"
 
-GRUB_CFG_FILE ?= "ampere-grub.cfg"
+GRUB_CFG_FILE ??= "ampere-grub.cfg"
+
 WKS_FILE ?= "ampere-efidisk.wks.in"
