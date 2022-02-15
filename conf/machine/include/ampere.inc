@@ -15,6 +15,5 @@ EFI_PROVIDER ?= "grub-efi"
 
 GRUB_CFG_FILE ?= "ampere-grub.cfg"
 WKS_FILE ?= "ampere-efidisk.wks.in"
-WIC_CREATE_EXTRA_ARGS:append = " --no-fstab-update"
 
 KERNEL_IMAGETYPE = "Image"
