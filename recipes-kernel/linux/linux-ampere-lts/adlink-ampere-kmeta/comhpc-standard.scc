@@ -1,0 +1,23 @@
+define KMACHINE comhpc
+define KTYPE standard
+define KARCH arm64
+
+#standard/Base configurations
+include ktypes/standard/standard.scc
+
+#Kernel Features
+include features/debug/printk.scc
+include features/hugetlb/hugetlb.scc
+include features/i2c/i2cdev.scc
+include features/ipmi/ipmi.scc
+include features/netfilter/netfilter.scc
+include features/power/arm.scc
+include features/profiling/profiling.scc
+include features/usb/ehci-hcd.scc
+include features/usb/xhci-hcd.scc
+
+include cfg/efi.scc
+include cfg/usb-mass-storage.scc
+
+#Board specific configuration
+include comhpc.scc
