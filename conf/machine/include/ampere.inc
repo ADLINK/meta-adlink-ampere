@@ -9,7 +9,7 @@ require conf/machine/include/arm/armv8-2a/tune-neoversen1.inc
 PREFERRED_PROVIDER_virtual/kernel ?= "linux-ampere-lts"
 PREFERRED_VERSION_linux-ampere-lts ?= "5.10%"
 
-IMAGE_FSTYPES += "tar.bz2 ext4 wic wic.bz2 wic.bmap"
+IMAGE_FSTYPES += "tar.bz2 wic.gz wic.bmap"
 
 EFI_PROVIDER ?= "grub-efi"
 
