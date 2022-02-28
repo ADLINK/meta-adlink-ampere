@@ -1,0 +1,11 @@
+# short-description: Create an EFI disk image
+# long-description: Creates a partitioned EFI disk image that the user
+# can directly dd to boot media. Uses a custom grub.cfg file to configure the boot.
+
+part /boot --source bootimg-efi --sourceparams=""loader=grub-efi"" --label msdos --active --align 1024 --size 256
+
+part / --source rootfs --fstype=ext4 --label root --align 1024 --size 4096 --use-uuid
+
+part /  --fstype=ext4 --label data --align 1024 --size 1024 
+
+bootloader --ptable gpt --configfile="adlink-grub.cfg" --timeout=5
