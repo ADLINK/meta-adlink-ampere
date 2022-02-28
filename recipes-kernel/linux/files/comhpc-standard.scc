@@ -20,7 +20,7 @@ include features/i2c/i2cdev.scc
 include features/ipmi/ipmi.scc
 include features/input/input.scc
 include features/profiling/profiling.scc
-
+include features/kprobes/kprobes.scc
 include features/kdump/kdump-enable.scc
 include features/kexec/kexec-enable.scc
 include features/debug/debug-kernel.scc 
