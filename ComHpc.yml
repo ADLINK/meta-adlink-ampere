@@ -25,4 +25,4 @@ bblayers_conf_header:
     BBFILES ?= ""
 
 target:
-  - ewaol-image-docker
+  - ewaol-image
