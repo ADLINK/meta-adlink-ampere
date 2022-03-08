@@ -9,13 +9,11 @@ require conf/machine/include/arm/armv8-2a/tune-neoversen1.inc
 PREFERRED_PROVIDER_virtual/kernel ?= "linux-ampere-lts"
 PREFERRED_VERSION_linux-ampere-lts ?= "5.10%"
 
+IMAGE_FSTYPES += "tar.bz2 wic.gz wic.bmap"
+
 EFI_PROVIDER ?= "grub-efi"
 
-
-IMAGE_FSTYPES += "tar.bz2 ext4 wic wic.bz2 wic.bmap"
-WKS_FILE ?= "ampere-efidisk.wks"
-WIC_CREATE_EXTRA_ARGS:append = " --no-fstab-update"
+GRUB_CFG_FILE ?= "ampere-grub.cfg"
+WKS_FILE ?= "ampere-efidisk.wks.in"
 
 KERNEL_IMAGETYPE = "Image"
-
-
