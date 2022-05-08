@@ -4,7 +4,7 @@ The high-level structure of the `meta-adlink-ampere repository is as follows:
 
 **conf**: Contains Machine configuration files for BSP  
 
-**recipes-kernel**: Provide support the Kernel version 5.10 and 5.4 and their corresponding defconfig files.
+**recipes-kernel**: Provide support the Kernel version 5.10 and their corresponding cofiguration files.
 
 **recipes-core**: Provide Image generating bb files.
 
