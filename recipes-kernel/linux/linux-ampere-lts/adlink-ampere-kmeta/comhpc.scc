@@ -1,0 +1,4 @@
+kconf hardware bsp/comhpcbase.cfg
+kconf hardware bsp/ethernet.cfg
+kconf hardware bsp/serial.cfg
+

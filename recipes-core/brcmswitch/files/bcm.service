@@ -1,0 +1,11 @@
+[Unit]
+Description=Broadcom switch control program
+After=syslog.target network.target
+
+[Service]
+ExecStart=/opt/bcm_control/bcm.sh start
+ExecStop=/opt/bcm_control/bcm.sh stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
