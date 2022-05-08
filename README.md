@@ -16,11 +16,10 @@ The repository contains Yocto layers that require dependencies as follows.
 
 | Layer               | Branch    | Commit ID                                |
 | ------------------- | --------- | ---------------------------------------- |
-| poky                | Hardknott | da0ce760c5372f8f2ef4c4dfa24b6995db73c66c |
-| meta-openembedded   | Hardknott | c51e79dd854460c6f6949a187970d05362152e84 |
-| meta-security       | Hardknott | c6b1eec0e5e94b02160ce0ac3aa9582cbbf7b0ed |
-| meta-virtualisation | Hardknott | 3508b13acbf669a5169fafca232a5c4ee705dd16 |
-| meta-arm            | Hardknott | e82d9fdd49745a6a064b636f2ea1e02c1750d298 |
+| poky                | kirkstone | d84c73d1ef05b7e12bcab2767f1a1f7a59ad17f2 |
+| meta-openembedded   | kirkstone | 5357c7a40eaf8d1bcf7ff58edbba8e9527e40c7d |
+| meta-virtualisation | kirkstone | 973c8d0964c6f40338857efe5b8009b2f647d485 |
+| meta-arm            | kirkstone | 2627002c85dee658ebb6a293496a72a927ad1f77 |
 
 ### How to build Yocto Image
 
