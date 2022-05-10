@@ -1,0 +1,36 @@
+---
+# SPDX-License-Identifier: MIT
+
+header:
+  version: 11
+
+defaults:
+  repos:
+    refspec: kirkstone
+
+repos:
+  meta-adlink-ampere:
+
+  meta-openembedded:
+    url: https://git.openembedded.org/meta-openembedded
+    path: layers/meta-openembedded
+    layers:
+      meta-oe:
+
+  poky:
+    url: https://git.yoctoproject.org/git/poky
+    path: layers/poky
+    layers:
+      meta:
+      meta-poky:
+
+local_conf_header:
+  settings: |
+    PACKAGE_CLASSES ?= "package_rpm"
+
+machine: comhpc
+
+distro: poky
+
+target:
+  - adlink-flasher-image
