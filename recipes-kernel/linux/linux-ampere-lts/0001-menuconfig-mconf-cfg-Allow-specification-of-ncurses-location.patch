@@ -1,4 +1,4 @@
-rom d078e29aa31ac3fa4c041bf89c46bc6372c1a02a Mon Sep 17 00:00:00 2001
+From d078e29aa31ac3fa4c041bf89c46bc6372c1a02a Mon Sep 17 00:00:00 2001
 From: Bruce Ashfield <bruce.ashfield@windriver.com>
 Date: Mon, 2 Jul 2018 23:10:28 -0400
 Subject: menuconfig,mconf-cfg: Allow specification of ncurses location
@@ -20,6 +20,8 @@ Signed-off-by: Jason Wessel <jason.wessel@windriver.com>
 cc: Michal Marek <mmarek@suse.cz>
 cc: linux-kbuild@vger.kernel.org
 Signed-off-by: Bruce Ashfield <bruce.ashfield@windriver.com>
+
+Upstream-Status: Inappropriate [oe specific, cross compile issue]
 ---
  scripts/kconfig/mconf-cfg.sh | 8 ++++++++
  1 file changed, 8 insertions(+)
