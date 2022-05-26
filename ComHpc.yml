@@ -2,11 +2,11 @@ header:
   version: 1
   includes:
     - repo: meta-ewaol
-      file: meta-ewaol-config/kas/ewaol-base.yml
+      file: meta-ewaol-config/kas/include/ewaol-base.yml
     - repo: meta-ewaol
       file: meta-ewaol-config/kas/tests.yml
     - repo: meta-ewaol
-      file: meta-ewaol-config/kas/arm-machines.yml
+      file: meta-ewaol-config/kas/include/arm-machines.yml
 
 repos:
   meta-ewaol:
