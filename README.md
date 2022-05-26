@@ -28,13 +28,13 @@ The flasher image can be build with `kas build ComHpc_flasher.yml`
 
 ### How to flash WIC image
 
-#### COMHPC:
+#### COMHPC-AVA:
 
 The wic image can be flashed to the USB stick with the following commands:
 ```
 $ sudo bmaptool copy \
-    --bmap build/tmp/deploy/comhpc/adlink-flasher-image-comhpc.wic.bmap \
-    build/tmp/deploy/comhpc/adlink-flasher-image-comhpc.wic.gz \
+    --bmap build/tmp/deploy/ava/adlink-flasher-image-ava.wic.bmap \
+    build/tmp/deploy/ava/adlink-flasher-image-ava.wic.gz \
     /dev/sdX
 ```
 where `/dev/sdX` a path to the target USB stick.
@@ -44,15 +44,15 @@ The wic image can also be flashed to the NVME drive using a USB stick with the
 ```
 1. Attach the USB stick, (re)boot the board and select the proper USB drive in
   the UEFI Boot menu.
-2. Select: 'USB Boot (If Drive is present): COM-HPC Yocto Image'
+2. Select: 'USB Boot (If Drive is present): COM-HPC AVA Yocto Image'
 3. Copy the *.wic.bmap and *.wic.gz images to the board.
   A. The files can be copied over the network from the build machine with e.g.:
-   scp build/tmp/deploy/comhpc/adlink-flasher-image-comhpc.wic.* \
+   scp build/tmp/deploy/ava/adlink-flasher-image-ava.wic.* \
        root@<BOARD_IP_ADDRESS>:/tmp
 4. Flash the wic images on the NVME drive with:
   # bmaptool copy \
-    --bmap /tmp/adlink-flasher-image-comhpc.wic.bmap \
-    /tmp/adlink-flasher-image-comhpc.wic.gz \
+    --bmap /tmp/adlink-flasher-image-ava.wic.bmap \
+    /tmp/adlink-flasher-image-ava.wic.gz \
     /dev/nvme0n1
 ```
 - Boot from USB drive

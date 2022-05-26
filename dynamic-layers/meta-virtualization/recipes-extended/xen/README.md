@@ -5,9 +5,9 @@ To build a Yocto image with the virtualization support, the
 `conf/bblayer.conf` file and the `conf/local.conf` configuration needs to be
 extended with:
 
-This example is for the comhpc machine:
+This example is for the ava machine:
 ```
-MACHINE = "comhpc"
+MACHINE = "ava"
 DISTRO_FEATURES:append = " xen virtualization"
 ```
 
@@ -18,7 +18,7 @@ Dom0 memory size(in MB) is set with the `DOM0_MEMORY_SIZE` variable. The
 dafault value is 4096, and it can be changed by setting this variable in
 the `conf/local.conf` file.
 
-For more information about ComHpc platform e.g.: firmware update, see:
+For more information about ComHpc-AVA platform e.g.: firmware update, see:
 [https://docs.ipi.wiki/COMHPC/ava](https://docs.ipi.wiki/COMHPC/ava)
 
 Known Issues:
