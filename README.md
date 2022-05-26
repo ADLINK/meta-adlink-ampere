@@ -22,7 +22,7 @@ The repository contains Yocto layers that require dependencies as follows.
 
 ### How to build Yocto Image
 
-The flasher image can be build with `kas build ComHpc_flasher.yml`
+The flasher image can be build with `kas build ava_flasher.yml`
 
 - see the Documentation for  more details
 

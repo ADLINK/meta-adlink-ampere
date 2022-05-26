@@ -16,7 +16,7 @@ repos:
 
 
 
-machine: comhpc
+machine: ava
 
 bblayers_conf_header:
   base: |

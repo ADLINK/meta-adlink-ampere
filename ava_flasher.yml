@@ -28,7 +28,7 @@ local_conf_header:
   settings: |
     PACKAGE_CLASSES ?= "package_rpm"
 
-machine: comhpc
+machine: ava
 
 distro: poky
 
