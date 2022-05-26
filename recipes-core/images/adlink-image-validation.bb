@@ -5,7 +5,7 @@ LICENSE = "MIT"
 
 inherit core-image
 
-WKS_FILE:comhpc = "adlink-efidisk.wks"
+WKS_FILE:ava = "adlink-efidisk.wks"
 
 ## Select Image Features
 IMAGE_FEATURES += " \

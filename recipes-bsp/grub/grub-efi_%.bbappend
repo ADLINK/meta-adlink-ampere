@@ -1,3 +1,3 @@
 # SPDX-License-Identifier: MIT
 
-GRUB_BUILDIN:append:comhpc = " tftp efinet gzio"
+GRUB_BUILDIN:append:ava = " tftp efinet gzio"

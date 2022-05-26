@@ -14,4 +14,4 @@ PV = "${LINUX_VERSION}+git${SRCPV}"
 
 require linux-ampere.inc
 
-SRC_URI:append:comhpc = " file://0002-swiotlb-xen-fix-DMA_ATTR_NO_KERNEL_MAPPING-on-arm.patch"
+SRC_URI:append:ava = " file://0002-swiotlb-xen-fix-DMA_ATTR_NO_KERNEL_MAPPING-on-arm.patch"

@@ -1,4 +1,4 @@
-define KMACHINE comhpc
+define KMACHINE ava
 define KTYPE standard
 define KARCH arm64
 
@@ -20,4 +20,4 @@ include cfg/efi.scc
 include cfg/usb-mass-storage.scc
 
 #Board specific configuration
-include comhpc.scc
+include ava.scc
