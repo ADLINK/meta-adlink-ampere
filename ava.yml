@@ -2,11 +2,7 @@ header:
   version: 1
   includes:
     - repo: meta-ewaol
-      file: meta-ewaol-config/kas/ewaol-base.yml
-    - repo: meta-ewaol
-      file: meta-ewaol-config/kas/tests.yml
-    - repo: meta-ewaol
-      file: meta-ewaol-config/kas/arm-machines.yml
+      file: meta-ewaol-config/kas/virtualization.yml
 
 repos:
   meta-ewaol:
@@ -25,4 +21,4 @@ bblayers_conf_header:
     BBFILES ?= ""
 
 target:
-  - ewaol-image
+  - ewaol-virtualization-image
