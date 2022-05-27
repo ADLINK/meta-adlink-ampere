@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: MIT
+
+[global]
+default=xen
+
+[xen]
+options=noreboot dom0_mem=${DOM0_MEMORY_SIZE} bootscrub=0 iommu=on loglvl=error guest_loglvl=error
+kernel=Image console=hvc0 earlycon=pl011,0x100002600000 rootwait root=PARTUUID=6a60524d-061d-454a-bfd1-38989910eccd

@@ -1,0 +1,70 @@
+From 95604873ccf56eb81e96ed0dc8b4dec3278f40ca Mon Sep 17 00:00:00 2001
+From: Rahul Singh <rahul.singh@arm.com>
+Date: Wed, 4 May 2022 18:15:12 +0100
+Subject: [PATCH] arm/its: enable LPIs before mapping the collection table
+
+When Xen boots on the platform that implements the GIC 600, ITS
+MAPC_LPI_OFF uncorrectable command error issue is observed.
+
+As per the GIC-600 TRM (Revision: r1p6) MAPC_LPI_OFF command error can
+be reported if the MAPC command has tried to map a collection to a core
+that does not have LPIs enabled. The definition of GICR.EnableLPIs
+also suggests enabling the LPIs before sending any ITS command that
+involves LPIs
+
+0b0 LPI support is disabled. Any doorbell interrupt generated as a
+    result of a write to a virtual LPI register must be discarded,
+    and any ITS translation requests or commands involving LPIs in
+    this Redistributor are ignored.
+
+0b1 LPI support is enabled.
+
+To fix the MAPC command error issue, enable the LPIs using
+GICR_CTLR.EnableLPIs before mapping the collection table.
+
+gicv3_enable_lpis() is using writel_relaxed(), write to the GICR_CTLR
+register may not be visible before gicv3_its_setup_collection() send the
+MAPC command. Use wmb() after writel_relaxed() to make sure register
+write to enable LPIs is visible.
+
+Signed-off-by: Rahul Singh <rahul.singh@arm.com>
+Acked-by: Julien Grall <jgrall@amazon.com>
+Reviewed-by: Bertrand Marquis <bertrand.marquis@arm.com>
+
+Upstream-Status: Backport [https://xenbits.xen.org/gitweb/?p=xen.git;a=commit;h=95604873ccf56eb81e96ed0dc8b4dec3278f40ca]
+Signed-off-by: Kamil Dziezyk <kamil.dziezyk@arm.com>
+---
+ xen/arch/arm/gic-v3.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/xen/arch/arm/gic-v3.c b/xen/arch/arm/gic-v3.c
+index 3c472ed768..64b36cec25 100644
+--- a/xen/arch/arm/gic-v3.c
++++ b/xen/arch/arm/gic-v3.c
+@@ -696,6 +696,9 @@ static bool gicv3_enable_lpis(void)
+     val = readl_relaxed(GICD_RDIST_BASE + GICR_CTLR);
+     writel_relaxed(val | GICR_CTLR_ENABLE_LPIS, GICD_RDIST_BASE + GICR_CTLR);
+ 
++    /* Make sure the GIC has seen the above */
++    wmb();
++
+     return true;
+ }
+ 
+@@ -812,11 +815,11 @@ static int gicv3_cpu_init(void)
+     /* If the host has any ITSes, enable LPIs now. */
+     if ( gicv3_its_host_has_its() )
+     {
++        if ( !gicv3_enable_lpis() )
++            return -EBUSY;
+         ret = gicv3_its_setup_collection(smp_processor_id());
+         if ( ret )
+             return ret;
+-        if ( !gicv3_enable_lpis() )
+-            return -EBUSY;
+     }
+ 
+     /* Set priority on PPI and SGI interrupts */
+-- 
+2.17.1
+
