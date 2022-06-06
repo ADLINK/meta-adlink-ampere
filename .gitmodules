@@ -1,0 +1,3 @@
+[submodule "meta-ewaol"]
+	path = meta-ewaol
+	url = https://git.gitlab.arm.com/ewaol/meta-ewaol.git
