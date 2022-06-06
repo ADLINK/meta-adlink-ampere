@@ -1,0 +1,9 @@
+# Editor files
+.~
+.*~
+*.swp
+*.swp
+
+# Build
+/layers
+/build
