@@ -20,43 +20,80 @@ The repository contains Yocto layers that require dependencies as follows.
 | meta-openembedded   | kirkstone | 5357c7a40eaf8d1bcf7ff58edbba8e9527e40c7d |
 | meta-virtualization | kirkstone | 973c8d0964c6f40338857efe5b8009b2f647d485 |
 
+## Build
+
+## Prerequisites
+
+`kas` is required for the build process.
+
+```sh
+pip3 install -U kas
+```
+
+`bmaptool` command is is required to flash the built image to the USB
+stick.  Install`bmap-tools` package if you are using Ubuntu.
+
+
+```sh
+sudo apt install bmap-tools
+```
+
+Download this repository and relating submodules.
+
+```sh
+git clone --recursive https://github.com/ADLINK/meta-adlink-ampere.git
+cd meta-adlink-ampere
+```
+
+(Optional) If the repo is downloaded but the submodules are not
+initialized yet, run these commands to download submodules.
+
+```sh
+cd meta-adlink-ampere  # Go to the repo downloaded earlier
+git submodule init
+git submodule update
+```
+
 ### How to build Yocto Image
 
-The flasher image can be build with `kas build ava_flasher.yml`
-
-- see the Documentation for  more details
+The flasher image can be build with `kas build ava_flasher.yml` See
+the Documentation for more details.
 
 ### How to flash WIC image
 
-#### COMHPC-AVA:
+The wic image can be flashed to the USB stick with the following
+commands, where `/dev/sdX` a path to the target USB stick:
 
-The wic image can be flashed to the USB stick with the following commands:
-```
-$ sudo bmaptool copy \
+```sh
+sudo bmaptool copy \
     --bmap build/tmp/deploy/ava/adlink-flasher-image-ava.wic.bmap \
     build/tmp/deploy/ava/adlink-flasher-image-ava.wic.gz \
     /dev/sdX
 ```
-where `/dev/sdX` a path to the target USB stick.
 
-The wic image can also be flashed to the NVME drive using a USB stick with the
-`adlink-flasher-image`:
-```
-1. Attach the USB stick, (re)boot the board and select the proper USB drive in
-  the UEFI Boot menu.
+The wic image can also be flashed to the NVME drive using a USB stick
+with the `adlink-flasher-image`:
+
+
+1. Attach the USB stick, (re)boot the board and select the proper USB
+  drive in the UEFI Boot menu.
 2. Select: 'USB Boot (If Drive is present): COM-HPC AVA Yocto Image'
-3. Copy the *.wic.bmap and *.wic.gz images to the board.
-  A. The files can be copied over the network from the build machine with e.g.:
-   scp build/tmp/deploy/ava/adlink-flasher-image-ava.wic.* \
-       root@<BOARD_IP_ADDRESS>:/tmp
+3. Copy the `*.wic.bmap` and `*.wic.gz` images to the board.
+    1. The files can be copied over the network from the build machine with e.g.:
+        ```sh
+        scp build/tmp/deploy/ava/adlink-flasher-image-ava.wic.* \
+             root@<BOARD_IP_ADDRESS>:/tmp
+        ```
 4. Flash the wic images on the NVME drive with:
-  # bmaptool copy \
-    --bmap /tmp/adlink-flasher-image-ava.wic.bmap \
-    /tmp/adlink-flasher-image-ava.wic.gz \
-    /dev/nvme0n1
-```
-- Boot from USB drive
-- Boot from SSD
+    ```
+    bmaptool copy \
+        --bmap /tmp/adlink-flasher-image-ava.wic.bmap \
+        /tmp/adlink-flasher-image-ava.wic.gz \
+        /dev/nvme0n1
+    ```
+
+<!-- - Boot from USB drive -->
+<!-- - Boot from SSD -->
 
 ## Repository License
 
