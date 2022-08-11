@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MIT
 
 SRCREV ?= "389fd561f4a87395bc21a48f8acdf8668ed26f0b"
-SRCREV_meta ?= "63e25b5717751b4b33685bd5991d10c52934a4c6"
+SRCREV_meta ?= "f7f709bf874f85baff9f2fb0ac0341c08399b144"
 
 LIC_FILES_CHKSUM = "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"
 
