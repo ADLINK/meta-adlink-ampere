@@ -16,9 +16,10 @@ The repository contains Yocto layers that require dependencies as follows.
 
 | Layer               | Branch    | Commit ID                                |
 | ------------------- | --------- | ---------------------------------------- |
-| poky                | kirkstone | d84c73d1ef05b7e12bcab2767f1a1f7a59ad17f2 |
-| meta-openembedded   | kirkstone | 5357c7a40eaf8d1bcf7ff58edbba8e9527e40c7d |
-| meta-virtualization | kirkstone | 973c8d0964c6f40338857efe5b8009b2f647d485 |
+| poky                | langdale | 6b9db5a99bf0fab47219d4648f4663c4397ac87f |
+| meta-openembedded   | langdale | c5668905a6d8a78fb72c2cbf8b20e91e686ceb86 |
+| meta-virtualization | langdale | 8857b36ebfec3d548755755b009adc491ef320ab |
+| meta-arm            | langdale | 4ee457693ed01c1c22e4244ad930732128511c2b |
 
 ## Build
 
