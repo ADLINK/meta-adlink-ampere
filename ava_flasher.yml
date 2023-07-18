@@ -6,7 +6,7 @@ header:
 
 defaults:
   repos:
-    refspec: kirkstone
+    refspec: langdale
 
 repos:
   meta-adlink-ampere:
