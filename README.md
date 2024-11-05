@@ -41,7 +41,7 @@ sudo apt install bmap-tools
 Download this repository and relating submodules.
 
 ```sh
-git clone --recursive https://github.com/ADLINK/meta-adlink-ampere.git
+git clone --recursive https://github.com/ADLINK/meta-adlink-ampere.git -b mickledore
 cd meta-adlink-ampere
 ```
 
