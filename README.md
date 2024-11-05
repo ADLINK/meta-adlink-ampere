@@ -107,4 +107,4 @@ To request support please contact ADlink sales.
 
 ## Maintainer(s)
 
-- Ryan Huang   [ryanzj.huang@adlinktech.com](mailto:ryanzj.huang@adlinktech.com)
+- Kothandaraman Kannadasan   [kothandaraman.k@adlinktech.com](mailto:kothandaraman.k@adlinktech.com)
