@@ -104,7 +104,3 @@ Contributions to the project should follow the same license.
 ## Feedback and support
 
 To request support please contact ADlink sales.
-
-## Maintainer(s)
-
-- Kothandaraman Kannadasan   [kothandaraman.k@adlinktech.com](mailto:kothandaraman.k@adlinktech.com)
