@@ -17,7 +17,7 @@ CORE_IMAGE_EXTRA_INSTALL += " \
     packagegroup-core-base-utils \
 "
 
-IMAGE_INSTALL:append = " i2c-tools libgpiod  bmap-tools iperf3 ipmitool inetutils dhcpcd openssh brcmswitch"
+IMAGE_INSTALL:append = " i2c-tools libgpiod  iperf3 ipmitool inetutils dhcpcd openssh "
 
 CORE_IMAGE_EXTRA_INSTALL += " dhcpcd"
 

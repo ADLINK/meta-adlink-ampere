@@ -14,7 +14,6 @@ IMAGE_FEATURES += "bash-completion-pkgs debug-tweaks ssh-server-openssh"
 IMAGE_INSTALL += " \
     bash \
     bash-completion-extra \
-    bmap-tools \
     ca-certificates \
     kernel-modules \
     util-linux-agetty \
