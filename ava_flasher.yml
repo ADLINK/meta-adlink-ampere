@@ -6,7 +6,7 @@ header:
 
 defaults:
   repos:
-    refspec: mickledore
+    refspec: scarthgap
 
 repos:
   meta-adlink-ampere:
@@ -34,3 +34,4 @@ distro: poky
 
 target:
   - adlink-flasher-image
+  - adlink-validation-image
