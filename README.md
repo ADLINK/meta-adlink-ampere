@@ -4,7 +4,7 @@ The high-level structure of the `meta-adlink-ampere repository is as follows:
 
 **conf**: Contains Machine configuration files for BSP
 
-**recipes-kernel**: Provide support the Kernel version 5.10 & 5.15 and their corresponding cofiguration files.
+**recipes-kernel**: Provide support the Kernel version 6.12 and their corresponding cofiguration files.
 
 **recipes-core**: Provide Image generating bb files.
 
@@ -16,8 +16,8 @@ The repository contains Yocto layers that require dependencies as follows.
 
 | Layer               | Branch    | Commit ID                                |
 | ------------------- | --------- | ---------------------------------------- |
-| poky                | mickledore | 6e17b3e644ca15b8b4afd071ccaa6f172a0e681a |
-| meta-openembedded   | mickledore | d71a08b3d8fc69d3213c10885af9cc693056a8bd |
+| poky                | mickledore | 9c63e0c9646c61663e8cfc6b4c75865cd0cd3b34 |
+| meta-openembedded   | mickledore | e92d0173a80ea7592c866618ef5293203c50544c |
 | meta-virtualization | mickledore | a19092ce81339a129edce745522eebf577efc744 |
 
 ## Build
