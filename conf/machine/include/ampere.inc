@@ -5,8 +5,13 @@
 require conf/machine/include/arm/armv8-2a/tune-neoversen1.inc
 
 # Use kernel provided by ampere
-PREFERRED_PROVIDER_virtual/kernel ?= "linux-ampere-lts"
-PREFERRED_VERSION_linux-ampere-lts ?= "5.15%"
+#PREFERRED_PROVIDER_virtual/kernel ?= "linux-ampere-lts"
+#PREFERRED_VERSION_linux-ampere-lts ?= "5.15%"
+
+
+PREFERRED_PROVIDER_virtual/kernel ?= "linux-kernel-lts"
+PREFERRED_VERSION_linux-kernel-lts ?= "6.12.27%"
+
 KERNEL_IMAGETYPE = "Image"
 
 IMAGE_FSTYPES += "tar.bz2 wic.gz wic.bmap"
