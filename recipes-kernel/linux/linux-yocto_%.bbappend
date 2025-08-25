@@ -8,7 +8,7 @@ FILESEXTRAPATHS:prepend:ava := "${THISDIR}:${THISDIR}/linux-yocto:"
 COMPATIBLE_MACHINE:append = "|ava"
 
 #
-# cassini kmeta
+# adlink kmeta
 #
 
 SRC_URI:append:ava = " file://adlink-ampere-kmeta;type=kmeta;destsuffix=/adlink-ampere-kmeta "
