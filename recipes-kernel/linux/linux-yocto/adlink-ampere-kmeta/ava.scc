@@ -1,0 +1,4 @@
+kconf hardware bsp/avabase.cfg
+kconf hardware bsp/ethernet.cfg
+kconf hardware bsp/serial.cfg
+
