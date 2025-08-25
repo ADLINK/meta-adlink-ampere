@@ -35,5 +35,4 @@ machine: ava
 distro: poky
 
 target:
-  - adlink-flasher-image
-  - adlink-validation-image
+  - adlink-image-validation
