@@ -27,6 +27,8 @@ repos:
 local_conf_header:
   settings: |
     PACKAGE_CLASSES ?= "package_rpm"
+    PREFERRED_PROVIDER_virtual/kernel = "linux-kernel-lts"
+    PREFERRED_VERSION_linux-kernel-lts  = "6.12.27%"        
 
 machine: ava
 

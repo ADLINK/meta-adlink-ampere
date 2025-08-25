@@ -1,0 +1,35 @@
+header:
+  version: 1
+  includes:
+    - repo: meta-ewaol
+      file: kas/ewaol.yml
+
+repos:
+  meta-ewaol:
+    path: meta-ewaol
+
+  meta-adlink-ampere:
+
+  meta-arm:
+    url: https://git.yoctoproject.org/meta-arm
+    path: layers/meta-arm
+    layers:
+      meta-arm:
+      meta-arm-toolchain:
+      
+local_conf_header:
+  settings: |
+    PACKAGE_CLASSES ?= "package_rpm"
+    PREFERRED_PROVIDER_virtual/kernel = "linux-yocto"
+
+machine: ava
+
+bblayers_conf_header:
+  base: |
+    POKY_BBLAYERS_CONF_VERSION = "2"
+    BBPATH = "${TOPDIR}"
+    BBFILES ?= ""
+    IMAGE_FEATURES:append = " cloud-service "
+
+target:
+  - cassini-image-base

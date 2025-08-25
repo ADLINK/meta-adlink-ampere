@@ -9,8 +9,8 @@ require conf/machine/include/arm/armv8-2a/tune-neoversen1.inc
 #PREFERRED_VERSION_linux-ampere-lts ?= "5.15%"
 
 
-PREFERRED_PROVIDER_virtual/kernel ?= "linux-kernel-lts"
-PREFERRED_VERSION_linux-kernel-lts ?= "6.12.27%"
+#PREFERRED_PROVIDER_virtual/kernel ?= "linux-kernel-lts"
+#PREFERRED_VERSION_linux-kernel-lts ?= "6.12.27%"
 
 KERNEL_IMAGETYPE = "Image"
 
